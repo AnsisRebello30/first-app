@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.eco-actions, .impact-summary {
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  background-color: #fafafa;
+}
+
+.eco-actions h2, .impact-summary h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eco-action-item, .impact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
+}
+
+.eco-action-item:last-child, .impact-item:last-child {
+  border-bottom: none;
+}
+
+.eco-action-item span, .impact-item span {
+  font-size: 1em;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #555;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clear-button {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  font-size: 0.9em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.clear-button:hover {
+  color: #555;
+}
+
+
+.impact-item .item-count {
+  font-weight: bold;
+  margin-right: 0.5em;
+  color: #666;
+}
+
+.impact-item .remove-btn {
+  color: #e74c3c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.impact-item .remove-btn:hover {
+  color: #c0392b;
 }
